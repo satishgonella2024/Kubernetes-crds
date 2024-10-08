@@ -1,4 +1,16 @@
+apiVersion: apiextensions.k8s.io/v1 # This is the correct apiVersion for CRDs
+kind: CustomResourceDefinition # This is required to define a CRD
+metadata:
+  name: fruits.gonella.co.uk # Name of the CRD
 spec:
+  group: gonella.co.uk # Group name (like a namespace for the CRD)
+  names:
+    plural: fruits # Plural name of the custom resource
+    singular: fruit # Singular name of the custom resource
+    kind: Fruit # Kind name for the resource
+    shortNames: # Short name to reference the resource
+    - fr
+  scope: Namespaced # Namespaced scope
   versions:
   - name: v1
     served: true
