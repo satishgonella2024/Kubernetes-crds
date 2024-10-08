@@ -1,0 +1,7 @@
+apiVersion: gonella.co.uk/v1
+kind: Fruit
+metadata:
+  name: apple
+spec:
+  name: Apple
+  color: Red
